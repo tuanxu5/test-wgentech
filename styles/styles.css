@@ -30,8 +30,7 @@ ol,
 ul {
   list-style: none;
 }
-
-body {
+html {
   font-family: "Lato";
   font-weight: 400;
   font-size: 16px;
@@ -41,12 +40,14 @@ body {
   display: flex;
   flex-direction: column;
   max-width: 1440px;
+  width: 100%;
   margin: 80px auto;
   justify-content: center;
   align-items: center;
-  gap: 4rem;
+  gap: 64px;
 }
 
+/* session intro */
 .section--intro {
   display: flex;
   flex-direction: column;
@@ -105,7 +106,7 @@ body {
 
 .section--details .details__image-wrapper img {
   border-radius: 24px;
-  max-width: 100%;
+  width: 100%;
   height: auto;
   display: block;
 }
@@ -139,4 +140,105 @@ body {
 .section--details .details__content .details__text {
   font-size: 0.875rem;
   line-height: 1.375rem;
+}
+
+@media (max-width: 1440px) {
+  html {
+    font-size: 15px;
+  }
+
+  .section--details {
+    padding: 0 24px;
+  }
+}
+
+@media (max-width: 1024px) {
+  html {
+    font-size: 15px;
+  }
+
+  .main-content {
+    gap: 28px;
+  }
+
+  .section--intro {
+    gap: 36px;
+  }
+
+  .section--intro .intro__content {
+    gap: 36px;
+  }
+
+  .section--intro .intro__content .intro__images {
+    padding: 0 16px;
+    gap: 4px;
+  }
+
+  .section--intro .intro__paragraph {
+    padding: 0 16px;
+  }
+
+  .section--details {
+    grid-template-columns: 1fr;
+    padding: 0 16px;
+  }
+
+  .section--details .details__content {
+    padding: 32px 24px;
+    gap: 16px;
+  }
+
+  .section--details .details__content .details__title {
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+  }
+
+  .section--details .details__content:first-child {
+    grid-row: 1;
+  }
+
+  .section--details .details__image-wrapper:first-child {
+    grid-row: 2;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+
+  .main-content {
+    gap: 28px;
+  }
+
+  .section--intro {
+    gap: 27px;
+  }
+
+  .section--intro .intro__content {
+    gap: 27px;
+  }
+
+  .section--intro .intro__content .intro__images {
+    padding: 0 10px;
+    gap: 4px;
+  }
+
+  .section--intro .intro__paragraph {
+    padding: 0 10px;
+  }
+
+  .section--details {
+    padding: 0 10px;
+  }
+
+  .section--details .details__content {
+    padding: 20px 18px;
+    gap: 16px;
+  }
+
+  .section--details .details__content .details__title {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
 }
